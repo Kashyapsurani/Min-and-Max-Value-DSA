@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min and max</title>
+</head>
+<body>
+    
+
+    <script>
+        function findminandmax(array) {
+            if (!array.length) {
+                console.log('no element');
+            } 
+
+            var min = array[0]
+            var max = array[0]
+            
+            for (let i = 1; i < array.length; i++) {
+
+                if (array[i] < min) {
+                    min = array[i]
+                }
+
+                if (array[i] > min) {
+                    max = array[i]
+                }
+            }
+
+
+            return {min,max}
+        }
+
+        var reselt = findminandmax([1,2 ])
+        console.log(`Min : ${reselt.min} and Max : ${reselt.max}`);
+    </script>
+</body>
+</html>
